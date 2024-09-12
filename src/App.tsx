@@ -27,10 +27,10 @@ const App = () => {
       }}
       templateColumns={{
         base: "1fr",
-        lg: "280px 1fr",
+        lg: "200px 1fr",
       }}
     >
-      <GridItem area="nav">
+      <GridItem area="nav" paddingX={3}>
         <NavBar
           onSearch={(searchText) => setGameQuery({ ...gameQuery, searchText })}
         />
@@ -43,10 +43,9 @@ const App = () => {
           />
         </GridItem>
       </Show>
-      <GridItem area="main">
+      <GridItem area="main" paddingX={3}>
         <Box paddingLeft={2} marginBottom={5}>
           <GameHeading gameQery={gameQuery}></GameHeading>
-
           <Flex>
             <Box marginRight={5}>
               <PlatformSelector
