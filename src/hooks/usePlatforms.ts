@@ -14,7 +14,7 @@ const usePlatforms = () => {
         queryKey: ["platforms"],
         queryFn: apiClient.getAll,
         staleTime: 1 * 60 * 60,
-        initialData: {count: platforms.length, results: platforms, next: null} // without set next attribute here will cause an error
+        initialData: platforms
     });
 }
 
